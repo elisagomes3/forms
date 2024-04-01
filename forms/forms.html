@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../forms/style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <form action="/submit_form.php" method="post">
+        <!-- O "action" especifica para onde os dados do formulário serão enviados quando submetidos. -->
+        <!-- O "method" especifica o método HTTP a ser usado ao enviar o formulário. O "post" é mais seguro para dados sensíveis. -->
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <!-- O "input" é usado para receber entrada do usuário. O "type" define o tipo de entrada. "text" é para entrada de texto simples. -->
+        <!-- O "id" fornece um identificador único para o elemento. -->
+        <!-- O "name" é usado para enviar o valor do campo para o servidor. -->
+        <!-- O "required" torna este campo obrigatório. -->
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <!-- "email" é usado para entrada de endereço de email. Ele valida automaticamente se o valor inserido está em um formato de email válido. -->
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        <!-- "password" é usado para entrada de senha. Os caracteres inseridos são mascarados por padrão para segurança. -->
+
+        <label for="cidade">Cidade:</label>
+        <select id="cidade" name="cidade">
+            <option value="joinville">Joinville</option>
+            <option value="florianopolis">Florianópolis</option>
+            <option value="penha">Penha</option>
+        </select>
+        <!-- "select" cria um menu suspenso. "option" define as opções dentro do menu. O valor de "value" será enviado ao servidor. -->
+
+       
+        <label for="aceito-termos">Aceito os termos e condições.</label>
+        <input type="checkbox" id="aceito-termos" name="aceito-termos" required>
+        <!-- "checkbox" é usado para caixas de seleção. "label" é usado para descrever a caixa de seleção. -->
+
+        <button type="submit">Enviar</button>
+        <!-- "button" é usado para enviar o formulário. O atributo "type" define o tipo de botão, que, por padrão, é "submit" para enviar o formulário. -->
+
+    </form>
+    
+</body>
+</html>
